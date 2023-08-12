@@ -1,0 +1,10 @@
+[Unit]
+Description=zram-systemd
+
+[Service]
+Type=oneshot
+ExecStart=/etc/systemd/system/zram-systemd
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
