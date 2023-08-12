@@ -4,7 +4,9 @@
 
 - build-latest: 0.0.1
 
-- Support for the distro: Ubuntu/Ubuntu-based-distribution/Debian/Debian-based-distribution/Arch/Arch-based-distribution/Manjaro/
+- Support for the distro: Ubuntu/Debian/Arch/Manjaro
+
+- If you are using a distribution based on Ubuntu, Debian, or Arch, the script will work without any issues.
 
 - ZRAM-SYSTEMD is an open-source project, and we are happy to share it with the community. You have complete freedom to do whatever you want with ZRAM-SYSTEMD, in accordance with the terms of the MIT license. You can modify, distribute, use it in your own projects, or even create a fork of ZRAM-SYSTEMD to add additional features.
 
