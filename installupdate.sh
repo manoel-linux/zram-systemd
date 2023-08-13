@@ -31,26 +31,15 @@ echo "#################################################################"
 exit 1
 fi
 
-web="fsf.org"
-
-if ! ping -q -c 1 -W 1 "$web" >/dev/null; then
-echo "#################################################################"
-echo "No internet connection. The script will not be executed."
-echo "#################################################################"
-exit 1
-fi
-
+sudo pacman -Sy
 sudo pacman -S iputils -y
 echo "#################################################################"
-sudo xbps-install inetutils-ping -y
-echo "#################################################################"
+sudo apt-get update
 sudo apt-get install --no-install-recommends inetutils-ping -y
 echo "#################################################################"
 
 clear
 
-echo "#################################################################"
-echo "Connected to the internet. Running the script..."
 echo "#################################################################"
 echo "(1)> (Install) the ZRAM-SYSTEMD version of Ubuntu/Debian"
 echo "(2)> (Install) the ZRAM-SYSTEMD version of Arch-Manjaro"
@@ -98,6 +87,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Ubuntu/Debian..." 
 echo "#################################################################"
+sudo apt-get update
 sudo apt-get install --no-install-recommends unzip binutils tar curl xz-utils grep gawk sed -y
 clear
 echo "#################################################################"
@@ -105,7 +95,7 @@ echo "#################################################################"
 read -p "Do you want to update your system? (y/n): " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
-sudo apt-get update -y
+sudo apt-get update
 sudo apt-get upgrade -y
 else
 echo "Skipping system update."
@@ -614,6 +604,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Arch/Manjaro..." 
 echo "#################################################################"
+sudo pacman -Sy
 sudo pacman -S unzip binutils tar curl xz grep gawk sed -y
 clear
 echo "#################################################################"
@@ -621,6 +612,7 @@ echo "#################################################################"
 read -p "Do you want to update your system? (y/n): " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
+sudo pacman -Sy
 sudo pacman -Syu -y
 else
 echo "Skipping system update."
