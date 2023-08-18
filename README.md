@@ -24,6 +24,22 @@
 
 - sudo `./installupdate.sh`
 
+# For check version
+
+sudo `zram-systemd-version`
+
+# For change the zram-systemd configuration
+
+sudo `zram-systemd-change`
+
+# For stop the zram-systemd
+
+sudo `zram-systemd-stop`
+
+# For start the zram-systemd
+
+sudo `zram-systemd-start`
+
 # For uninstall
 
 - chmod a+x `uninstall.sh`
