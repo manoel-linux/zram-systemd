@@ -4,20 +4,18 @@ clear
 
 show_main_menu() {
 while true; do
-
 clear
 echo "#################################################################"
-echo "zram-systemd-installer: aug 2023"
+echo "zram-systemd-installer >> (aug 2023)"
 echo "#################################################################"
 echo " ███████ ██████   █████  ███    ███ "
 echo "    ███  ██   ██ ██   ██ ████  ████ "
 echo "   ███   ██████  ███████ ██ ████ ██ "
 echo "  ███    ██   ██ ██   ██ ██  ██  ██ "
-echo " ███████ ██   ██ ██   ██ ██      ██ "                                                                       
+echo " ███████ ██   ██ ██   ██ ██      ██ "    
 echo "#################################################################"
-echo "zram-systemd-github: https://github.com/manoel-linux/zram-systemd"
+echo "zram-systemd-github >> (https://github.com/manoel-linux/zram-systemd)"
 echo "#################################################################"
-
 
 if [[ $EUID -ne 0 ]]; then
 echo " ███████ ██████  ██████   ██████  ██████  ██ "
