@@ -8,7 +8,7 @@ echo " █████   ██████  ██████  ██    █�
 echo " ██      ██   ██ ██   ██ ██    ██ ██   ██    "
 echo " ███████ ██   ██ ██   ██  ██████  ██   ██ ██ "                                                                                        
 echo "#################################################################"
-echo "Superuser privileges or sudo required to execute the script." 
+echo "(Superuser privileges or sudo required to execute the script)" 
 echo "#################################################################"
 exit 1
 fi
@@ -34,17 +34,17 @@ echo " ██   ██ ██    ██ ██ ██  ██ █████   
 echo " ██   ██ ██    ██ ██  ██ ██ ██         "
 echo " ██████   ██████  ██   ████ ███████ ██ "                                                                                                                                                                                                                                  
 echo "#################################################################"
-echo "The zram-systemd was started successfully."
+echo "(The zram-systemd was started successfully)"
 echo "#################################################################"  
-read -p "To apply the changes, you need to restart system. (y/n): " confirm
+read -p "(To apply the changes, you need to restart system) (y/n) >> " confirm
                 
 if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
 echo "#################################################################"
-echo "Restarting the system..."    
+echo "(Restarting the system)"    
 echo "#################################################################"
 sudo reboot
 else
 echo "#################################################################"
-echo "Restart canceled."
+echo "(Restart canceled)"
 echo "#################################################################"
 fi
