@@ -108,32 +108,32 @@ sudo cp systemd/zram-systemd /usr/bin/
 clear
 
 echo "#################################################################"
-read -p "Enter the desired size for ZRAM (e.g., 2G or 4G or 8G): " zram_size_input
+read -p "(Enter the desired size for ZRAM (e.g., 2G or 4G or 8G) >> " zram_size_input
 echo "#################################################################"
 
 if [[ $zram_size_input == *GB ]]; then
 echo "#################################################################"
-echo "Please enter the size with 'G' in uppercase, for example: 2G or 4G or 8G"
+echo "(Please enter the size with 'G' in uppercase, for example >> 2G or 4G or 8G)"
 echo "#################################################################"
 exit 1
 fi
 
 if [[ $zram_size_input == *gb ]]; then
 echo "#################################################################"
-echo "Please enter the size with 'G' in uppercase, for example: 2G or 4G or 8G"
+echo "(Please enter the size with 'G' in uppercase, for example >> 2G or 4G or 8G)"
 echo "#################################################################"
 exit 1
 fi
 
 if [[ $zram_size_input == *g ]]; then
 echo "#################################################################"
-echo "Please enter the size with 'G' in uppercase, for example: 2G or 4G or 8G"
+echo "(Please enter the size with 'G' in uppercase, for example >> 2G or 4G or 8G)"
 echo "#################################################################"
 exit 1
 fi
 
 zram_size="${zram_size_input//G}"
-read -p "Choose a compression algorithm (l for lz4, z for zstd): " selected_algorithm
+read -p "(Choose a compression algorithm (l for lz4, z for zstd) >> " selected_algorithm
 echo "#################################################################"
 case $selected_algorithm in
 l)
@@ -143,330 +143,330 @@ z)
 compression_algorithm="zstd"
 ;;
 *)
-echo "Invalid choice. Using the default algorithm (lz4)."
+echo "(Invalid choice. Using the default algorithm (lz4)"
 echo "#################################################################"
 compression_algorithm="lz4"
 ;;
 esac
 
-read -p "Enter the desired priority for ZRAM (e.g., 100 or 200): " zram_priority
+read -p "(Enter the desired priority for ZRAM (e.g., 100 or 200) >> " zram_priority
 echo "#################################################################"
 
 if [[ $zram_priority == "10%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "20%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "30%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "40%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "50%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "60%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "60%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "70%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "80%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "90%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "100%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "110%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "120%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "130%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "140%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "150%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "160%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "170%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "180%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "190%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "200%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "210%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "220%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "230%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "240%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "250%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "260%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "270%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "280%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "290%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "300%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "310%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "320%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "330%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "340%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "350%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "360%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "300%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "370%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "380%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "390%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "400%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "410%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "420%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "430%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "440%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "450%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "460%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "470%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "480%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "490%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "500%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
@@ -625,32 +625,32 @@ sudo cp systemd/zram-systemd /usr/bin/
 clear
 
 echo "#################################################################"
-read -p "Enter the desired size for ZRAM (e.g., 2G or 4G or 8G): " zram_size_input
+read -p "(Enter the desired size for ZRAM (e.g., 2G or 4G or 8G) >> " zram_size_input
 echo "#################################################################"
 
 if [[ $zram_size_input == *GB ]]; then
 echo "#################################################################"
-echo "Please enter the size with 'G' in uppercase, for example: 2G or 4G or 8G"
+echo "(Please enter the size with 'G' in uppercase, for example >> 2G or 4G or 8G)"
 echo "#################################################################"
 exit 1
 fi
 
 if [[ $zram_size_input == *gb ]]; then
 echo "#################################################################"
-echo "Please enter the size with 'G' in uppercase, for example: 2G or 4G or 8G"
+echo "(Please enter the size with 'G' in uppercase, for example >> 2G or 4G or 8G)"
 echo "#################################################################"
 exit 1
 fi
 
 if [[ $zram_size_input == *g ]]; then
 echo "#################################################################"
-echo "Please enter the size with 'G' in uppercase, for example: 2G or 4G or 8G"
+echo "(Please enter the size with 'G' in uppercase, for example >> 2G or 4G or 8G)"
 echo "#################################################################"
 exit 1
 fi
 
 zram_size="${zram_size_input//G}"
-read -p "Choose a compression algorithm (l for lz4, z for zstd): " selected_algorithm
+read -p "(Choose a compression algorithm (l for lz4, z for zstd) >> " selected_algorithm
 echo "#################################################################"
 case $selected_algorithm in
 l)
@@ -660,330 +660,330 @@ z)
 compression_algorithm="zstd"
 ;;
 *)
-echo "Invalid choice. Using the default algorithm (lz4)."
+echo "(Invalid choice. Using the default algorithm (lz4)"
 echo "#################################################################"
 compression_algorithm="lz4"
 ;;
 esac
 
-read -p "Enter the desired priority for ZRAM (e.g., 100 or 200): " zram_priority
+read -p "(Enter the desired priority for ZRAM (e.g., 100 or 200) >> " zram_priority
 echo "#################################################################"
 
 if [[ $zram_priority == "10%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "20%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "30%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "40%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "50%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "60%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "60%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "70%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "80%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "90%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "100%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "110%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "120%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "130%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "140%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "150%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "160%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "170%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "180%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "190%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "200%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "210%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "220%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "230%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "240%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "250%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "260%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "270%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "280%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "290%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "300%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "310%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "320%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "330%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "340%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "350%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "360%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "300%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "370%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "380%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "390%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "400%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "410%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "420%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "430%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "440%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "450%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "460%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "470%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "480%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "490%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "500%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
 if [[ $zram_priority == "%" ]]; then
 zram_priority="100"
-echo "Automatic priority (100) chosen."
+echo "(Automatic priority (100) chosen)"
 echo "#################################################################"
 fi
 
