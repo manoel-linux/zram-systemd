@@ -6,7 +6,7 @@ show_main_menu() {
 while true; do
 clear
 echo "#################################################################"
-echo "zram-systemd-installer >> (aug 2023)"
+echo "(zram-systemd-installer) >> (aug 2023)"
 echo "#################################################################"
 echo " ███████ ██████   █████  ███    ███ "
 echo "    ███  ██   ██ ██   ██ ████  ████ "
@@ -14,7 +14,7 @@ echo "   ███   ██████  ███████ ██ ███�
 echo "  ███    ██   ██ ██   ██ ██  ██  ██ "
 echo " ███████ ██   ██ ██   ██ ██      ██ "    
 echo "#################################################################"
-echo "zram-systemd-github >> (https://github.com/manoel-linux/zram-systemd)"
+echo "(zram-systemd-github) >> (https://github.com/manoel-linux/zram-systemd)"
 echo "#################################################################"
 
 if [[ $EUID -ne 0 ]]; then
@@ -24,7 +24,7 @@ echo " █████   ██████  ██████  ██    █�
 echo " ██      ██   ██ ██   ██ ██    ██ ██   ██    "
 echo " ███████ ██   ██ ██   ██  ██████  ██   ██ ██ "                                                                                        
 echo "#################################################################"
-echo "Superuser privileges or sudo required to execute the script." 
+echo "(Superuser privileges or sudo required to execute the script)" 
 echo "#################################################################"
 exit 1
 fi
@@ -39,12 +39,12 @@ echo "#################################################################"
 clear
 
 echo "#################################################################"
-echo "(1)> (Install) the ZRAM-SYSTEMD version of Ubuntu/Debian"
-echo "(2)> (Install) the ZRAM-SYSTEMD version of Arch-Manjaro"
+echo "(1)> (Install) >> (the ZRAM-SYSTEMD version of Ubuntu/Debian)"
+echo "(2)> (Install) >> (the ZRAM-SYSTEMD version of Arch-Manjaro)"
 echo "(3)> (Exit)"
 echo "#################################################################"
 
-read -p "Enter your choice: " choice
+read -p "(Enter your choice) >> " choice
 echo "#################################################################"
 
 case $choice in
@@ -58,7 +58,7 @@ show_arch-manjaro
 exit 0
 ;;
 *)
-echo "Invalid choice. Please try again."
+echo "(Invalid choice. Please try again)"
 echo "#################################################################"
 sleep 2
 ;;
@@ -71,32 +71,31 @@ while true; do
 clear
 if [ ! -x /bin/systemctl ]; then
 echo "#################################################################"
-echo "(Warning!) >> Your system doesn't have systemd."
+echo "(Warning) >> (Your system doesn't have systemd)"
 echo "#################################################################"
 exit 1
 fi
 if [ ! -x /bin/apt ]; then
 echo "#################################################################"
-echo "(Warning!) >> You are trying to run a version meant for another distribution. 
-To prevent issues, the script has blocked a warning to execute the version meant for your distribution."
+echo "(Warning) >> (You are trying to run a version meant for another distribution) 
+(To prevent issues, the script has blocked a warning to execute the version meant for your distribution)"
 echo "#################################################################"
 exit 1
 fi
-echo "#################################################################"
-echo "Checking for updates in Ubuntu/Debian..." 
+echo "(Checking for updates in Ubuntu/Debian)" 
 echo "#################################################################"
 sudo apt-get update
 sudo apt-get install --no-install-recommends unzip binutils tar curl xz-utils grep gawk sed -y
 clear
 echo "#################################################################"
 
-read -p "Do you want to update your system? (y/n): " choice
+read -p "(Do you want to update your system) (y/n) >> " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
 sudo apt-get update
 sudo apt-get upgrade -y
 else
-echo "Skipping system update."
+echo "(Skipping system update)"
 echo "#################################################################"
 fi
 
@@ -552,26 +551,26 @@ echo " ██   ██ ██    ██ ██ ██  ██ █████   
 echo " ██   ██ ██    ██ ██  ██ ██ ██         "
 echo " ██████   ██████  ██   ████ ███████ ██ "  
 echo "#################################################################"
-echo "Installation/Update completed."
+echo "(Installation/Update completed)"
 echo "#################################################################"
-echo "To change the zram-systemd configuration, use the command: sudo zram-systemd-change"
-echo "To stop the zram-systemd, use the command: sudo zram-systemd-stop"
-echo "To start the zram-systemd, use the command: sudo zram-systemd-start"
-echo "To check the version of zram-systemd, use the command: sudo zram-systemd-version"
+echo "(To change the zram-systemd configuration, use the command >> sudo zram-systemd-change)"
+echo "(To stop the zram-systemd, use the command >> sudo zram-systemd-stop)"
+echo "(To start the zram-systemd, use the command >> sudo zram-systemd-start)"
+echo "(To check the version of zram-systemd, use the command >> sudo zram-systemd-version)"
 echo "#################################################################"  
-read -p "To apply the changes, you need to restart system. (y/n): " confirm
+read -p "(To apply the changes, you need to restart system) (y/n) >> " confirm
                 
 if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
 echo "#################################################################"
-echo "Restarting the system..."    
+echo "(Restarting the system)"    
 echo "#################################################################"
 sudo reboot
 else
 echo "#################################################################"
-echo "Restart canceled."
+echo "(Restart canceled)"
 echo "#################################################################"
 fi
-read -rsn1 -p "press Enter to return to the main menu
+read -rsn1 -p "(press Enter to return to the main menu)
 #################################################################" key
 if [[ $key == "r" || $key == "R" ]]; then
 continue
@@ -588,32 +587,32 @@ while true; do
 clear
 if [ ! -x /bin/systemctl ]; then
 echo "#################################################################"
-echo "(Warning!) >> Your system doesn't have systemd."
+echo "(Warning) >> (Your system doesn't have systemd)"
 echo "#################################################################"
 exit 1
 fi
 if [ ! -x /bin/pacman ]; then
 echo "#################################################################"
-echo "(Warning!) >> You are trying to run a version meant for another distribution. 
-To prevent issues, the script has blocked a warning to execute the version meant for your distribution."
+echo "(Warning) >> (You are trying to run a version meant for another distribution) 
+(To prevent issues, the script has blocked a warning to execute the version meant for your distribution)"
 echo "#################################################################"
 exit 1
 fi
 echo "#################################################################"
-echo "Checking for updates in Arch/Manjaro..." 
+echo "(Checking for updates in Arch/Manjaro)" 
 echo "#################################################################"
 sudo pacman -Sy
 sudo pacman -S unzip binutils tar curl xz grep gawk sed -y
 clear
 echo "#################################################################"
 
-read -p "Do you want to update your system? (y/n): " choice
+read -p "(Do you want to update your system) (y/n) >> " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
 sudo pacman -Sy
 sudo pacman -Syu -y
 else
-echo "Skipping system update."
+echo "(Skipping system update)"
 echo "#################################################################"
 fi
 
@@ -1063,26 +1062,26 @@ echo " ██   ██ ██    ██ ██ ██  ██ █████   
 echo " ██   ██ ██    ██ ██  ██ ██ ██         "
 echo " ██████   ██████  ██   ████ ███████ ██ "  
 echo "#################################################################"
-echo "Installation/Update completed."
+echo "(Installation/Update completed)"
 echo "#################################################################"
-echo "To change the zram-systemd configuration, use the command: sudo zram-systemd-change"
-echo "To stop the zram-systemd, use the command: sudo zram-systemd-stop"
-echo "To start the zram-systemd, use the command: sudo zram-systemd-start"
-echo "To check the version of zram-systemd, use the command: sudo zram-systemd-version"
+echo "(To change the zram-systemd configuration, use the command >> sudo zram-systemd-change)"
+echo "(To stop the zram-systemd, use the command >> sudo zram-systemd-stop)"
+echo "(To start the zram-systemd, use the command >> sudo zram-systemd-start)"
+echo "(To check the version of zram-systemd, use the command >> sudo zram-systemd-version)"
 echo "#################################################################"  
-read -p "To apply the changes, you need to restart system. (y/n): " confirm
+read -p "(To apply the changes, you need to restart system) (y/n) >> " confirm
                 
 if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
 echo "#################################################################"
-echo "Restarting the system..."    
+echo "(Restarting the system)"    
 echo "#################################################################"
 sudo reboot
 else
 echo "#################################################################"
-echo "Restart canceled."
+echo "(Restart canceled)"
 echo "#################################################################"
 fi
-read -rsn1 -p "press Enter to return to the main menu
+read -rsn1 -p "(press Enter to return to the main menu)
 #################################################################" key
 if [[ $key == "r" || $key == "R" ]]; then
 continue
