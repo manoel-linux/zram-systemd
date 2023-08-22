@@ -42,7 +42,7 @@ echo " ██████   ██████  ██   ████ ███�
 echo "#################################################################"
 echo "(zram-systemd has been successfully stopped)"
 echo "#################################################################"
-echo "To start zram-systemd again, use the command: sudo zram-systemd-start"
+echo "(To start zram-systemd again, use the command >> sudo zram-systemd-start)"
 echo "#################################################################"  
 read -p "(To apply the changes, you need to restart system) (y/n) >> " confirm
                 
