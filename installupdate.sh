@@ -82,6 +82,7 @@ echo "(Warning) >> (You are trying to run a version meant for another distributi
 echo "#################################################################"
 exit 1
 fi
+echo "#################################################################"
 echo "(Checking for updates in Ubuntu/Debian)" 
 echo "#################################################################"
 sudo apt-get update
